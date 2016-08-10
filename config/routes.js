@@ -38,10 +38,7 @@ module.exports.routes = {
 
   'post /signin': 'UserController.signin',
   'get /login': { view: 'login' },
-  'post /signup': 'UserController.signup',
-  'get /singup': { view: 'singup' },
-  'get /uploadFile': {view: 'uploadFile'},
-  'post /uploadimg': 'UserController.uploadimg',
+
 
   /***************************************************************************
   *                                                                          *
