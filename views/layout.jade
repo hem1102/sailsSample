@@ -26,6 +26,11 @@ html
               a(href='/') #{i18n('home')}
             li(class=(req.options.controller == 'user' ? 'active' : ''))
               a(href='/login') 登入
+            li(class=(req.options.controller == 'user' ? 'active' : ''))
+              a(href='/singup') 註冊 
+            li(class=(req.options.controller == 'user' ? 'active' : ''))
+              a(href='/uploadFile') 圖片
+            
 
     
     block body

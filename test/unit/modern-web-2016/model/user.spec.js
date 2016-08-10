@@ -5,10 +5,25 @@ describe('對 User Model 進行使用者驗證', function() {
   before(async (done) => {
     // 建立測試的 user 資料
     // 在進行 Login 驗證前需要先有 User 存在
+    module.exports = {
+      attributes: {
+        email: {
+          type: Sequelize.STRING,
+          allowNull: false
+        },
+        password: {
+          type: Sequelize.STRING,
+          allowNull: false
+        }
+      }
+    };
 
     try {
       // 撰寫使用者建立程式碼
-      user = {}
+      user = await User.create({
+        email: 'test@gmail.com',
+        password: 'test'
+      });
 
       done();
     } catch (e) {
@@ -26,7 +41,7 @@ describe('對 User Model 進行使用者驗證', function() {
       }
 
       //process and Output，在此實作查詢出在 before 建立的使用者。
-      let userExist = {};
+      let userExist = await User.findOne({where});
 
       //check Output
       userExist.email.should.be.equal(user.email);

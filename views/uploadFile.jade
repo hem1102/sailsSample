@@ -1,0 +1,10 @@
+extends ./layout
+
+block body
+  .container
+    form.form-signin(action='/uploadimg', method='post', id='uploadForm', enctype='multipart/form-data')
+      h2.form-signin-heading plea upload
+      input(type='file', name='uploadFile')
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') upload
+      
+block scripts

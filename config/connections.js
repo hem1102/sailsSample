@@ -29,7 +29,6 @@ module.exports.connections = {
       'storage': './sqlite.db'
     }
   },
-
   mysql: {
     'user': process.env.MYSQL_ENV_MYSQL_USER_NAME || "root",
     'password': process.env.MYSQL_ENV_MYSQL_USER_PASS || "root",
