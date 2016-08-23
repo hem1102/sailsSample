@@ -16,4 +16,20 @@ module.exports = {
       throw e;
     }
   },
+
+  signupUser: async ({user}) => {
+    try
+    {
+
+      let usersignup = await User.create({
+        email: user.email,
+        password: user.password
+      });
+      
+      return usersignup;
+
+    } catch (e) {
+      throw e;
+    }
+  },
 }

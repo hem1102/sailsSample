@@ -12,7 +12,7 @@ html
     // STYLES
     link(rel="stylesheet", href="/styles/importer.css")
     // STYLES END
-    
+
     block styles
 
   body
@@ -26,9 +26,11 @@ html
               a(href='/') #{i18n('home')}
             li(class=(req.options.controller == 'user' ? 'active' : ''))
               a(href='/login') 登入
-            
+            li(class=(req.options.controller == 'user' ? 'active' : ''))
+              a(href='/signup') Signuuuuuuuuuuuuuuuuuuuuup
 
-    
+
+
     block body
 
     // SCRIPTS
